@@ -14,7 +14,32 @@
 
 
     //PROCESSAMENTO
-    const numero = [];
+    let numero = [];
+
+    if ((number1 > number2) && ( number1 > number3) && (number2 > number3)) {
+        numero.push(number1, number2, number3);
+        alert(`Ordem decrescente: ${numero.join(" - ")}`);
+        
+    } else if ((number1 > number2) && ( number1 > number3) && (number3 > number2)) {
+        numero.push(number1, number3, number2);
+        alert(`Ordem decrescente: ${numero.join(" - ")}`);
+
+    }else if ((number2 > number1) && (number2 > number3) && (number1 > number3)) {
+        numero.push(number2, number1, number3);
+        alert(`Ordem decrescente: ${numero.join(" - ")} `);
+
+    }else if ((number2 > number1) && (number2 > number3) && (number3 > number1)) {
+        numero.push(number2, number3, number1);
+        alert(`Ordem decrescente: ${numero.join(" - ")} `);
+
+    }else if ((number3 > number1) && (number3 > number2) && (number1 > number2)) {
+        numero.push(number3, number1, number2);
+        alert(`Ordem decrescente: ${numero.join(" - ")} `);
+
+    }else  {
+        numero.push(number3, number2, number1);
+        alert(`Ordem decrescente: ${numero.join(" - ")}`);
+    };
 
 
 
