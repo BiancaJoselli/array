@@ -1,0 +1,27 @@
+<meta charset="UTF-8" />
+<script>
+    /*
+    PROBLEMA: ARRAY EM ORDEM CRESCENTE
+    Peça para um usuário inserir dois números. Crie um array com os números, colocando-os em ordem crescente. Para ordenar, NÃO use o método sort();
+    Retorne os elementos do array, separando-os por hífen (n1 - n2).
+    */
+
+    //ENTRADA
+    const number1 = Number(prompt("Informe um número:"));
+    const number2 = Number(prompt("Informe outro número:"));
+
+
+    //PROCESSAMENTO
+    const numero = [];
+
+    let mensagemFinal = "";
+
+    (number1 > number2) ? numero.push(number1) + numero.push(number2) : 
+    numero.push(number2) + numero.push(number1);
+    
+
+
+    //SAÍDA
+    alert(`A ordem crescente é ${numero.join(" - ")}`)
+
+</script>
