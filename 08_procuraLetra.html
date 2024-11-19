@@ -5,15 +5,26 @@
     Peça para o usuário digitar UMA palavra.
     Peça para o usuário digitar a letra que deseja encontrar na palavra que acabou de digitar.
 
-    Apresente para o usuário se a LETRA que ele quer procurar existe ou não na palavra digitada e qual a primeira posição da LETRA na PALAVRA.
+    Apresente para o usuário se a LETRA que ele quer procurar existe ou não na palavra digitada e qual a primeira 
+    posição da LETRA na PALAVRA.
     */
 
     //ENTRADA
 
+    const palavra = prompt("Informe UMA palavra:");
+    const letra = prompt("Informe a letra que deseja encontrar na palavra digitada anteriormente:");
 
-    //PROCESSAMENTO
+     //PROCESSAMENTO
 
+    const posicao = palavra.search(letra);
 
-    //SAÍDA
+    if (posicao !== -1) {
+        alert(`EXISTE! \nA letra ${letra} existe na palavra: ${palavra}; E sua primeira posição é: ${posicao}`);
+
+    } else {
+        alert(`NÃO EXISTE!  \nA letra ${letra} não existe na palavra ${palavra}.`);
+
+    }
+
 
 </script>
