@@ -9,24 +9,29 @@
     */
 
     //ENTRADA
-    const carrosSuv = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
-    const carroRemovido = prompt("Informe o carro que deseja remover:" + carrosSuv);
 
+    let listaSUV = ["Tiggo", "Sportage", "Tucson", "EcoSport"];
+
+    let carroRemover = prompt("Qual carro você deseja remover da lista?\n" + listaSUV.join(", ")); // join está convertendo o array para uma string
 
     //PROCESSAMENTO
 
-    let remover = [];
+    let listaAtualizada = [...listaSUV]; // Os três pontinhos (...) fazem uma cópia independente do array original (listaSUV).
 
-    const posicaoTexto = carrosSuv.indexOf(carroRemovido);
-    remover = carrosSuv.splice(posicaoTexto);
-    
-    document.write(`A lista antiga de SUVs é: ${carrosSuv}; <br> A lista nova de SUVs é: ${remover}.`);
+    let carroRemovido = listaAtualizada.indexOf(carroRemover); //Retorna o índice.
 
+    if (carroRemovido >= 0) {
+        listaAtualizada.splice(carroRemovido, 1); //Adiciona, remove ou substitui elementos em posições específicas do array.
 
+        document.write(`
+        Lista antiga: ${listaSUV.join(", ")} <br> 
+        Lista atualizada: ${listaAtualizada.join(", ")}`);
 
+        //join: Junta os elementos do array em uma string
 
-
-
+    } else {
+        alert("Valor inválido!");
+    }
 
     //SAÍDA
 
