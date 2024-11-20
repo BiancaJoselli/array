@@ -11,15 +11,15 @@
 
     //ENTRADA
 
-    const palavra = prompt("Informe UMA palavra:");
-    const letra = prompt("Informe a letra que deseja encontrar na palavra digitada anteriormente:");
+    const palavra = prompt("Informe UMA palavra:").toLowerCase();
+    const letra = prompt("Informe a letra que deseja encontrar na palavra digitada anteriormente:").toLowerCase();
 
      //PROCESSAMENTO
 
-    const posicao = palavra.search(letra);
+    const posicao = palavra.indexOf(letra); 
 
     if (posicao !== -1) {
-        alert(`EXISTE! \nA letra ${letra} existe na palavra: ${palavra}; E sua primeira posição é: ${posicao}`);
+        alert(`EXISTE! \nA letra ${letra} existe na palavra: ${palavra}; \nE sua primeira posição é: ${posicao}`);
 
     } else {
         alert(`NÃO EXISTE!  \nA letra ${letra} não existe na palavra ${palavra}.`);

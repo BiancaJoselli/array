@@ -22,13 +22,13 @@
 
     const list = " SUV, Sedan e Hatch."
 
-    let veiculo1 = prompt("Informe o primeiro veículo:").toLowerCase();
+    let veiculo1 = prompt("Informe o primeiro veículo:");
     let tipo1 = prompt("Informe o tipo do primeiro veículo:" + list).toLowerCase();
 
-    let veiculo2 = prompt("Informe o segundo veículo:").toLowerCase();
+    let veiculo2 = prompt("Informe o segundo veículo:");
     let tipo2 = prompt("Informe o tipo do segundo veículo:" + list).toLowerCase();
 
-    let veiculo3 = prompt("Informe o terceiro veículo:").toLowerCase();
+    let veiculo3 = prompt("Informe o terceiro veículo:");
     let tipo3 = prompt("Informe o tipo do terceiro veículo:" + list).toLowerCase();
 
     //PROCESSAMENTO
@@ -44,7 +44,7 @@
         carrosHatch.push(veiculo1);
 
     } else {
-        document.write(`Informe um valor válido!!`)
+        alert(`O primeiro tipo de veiculo não é válido!`);
     }
 
     if (tipo2 == "suv") {
@@ -57,7 +57,7 @@
         carrosHatch.push(veiculo2);
 
     } else {
-        document.write(`Informe um valor válido!!`)
+        alert(`O segundo tipo de veiculo não é válido!`);
     }
 
     if (tipo3 == "suv") {
@@ -70,14 +70,13 @@
         carrosHatch.push(veiculo3);
 
     } else {
-        document.write(`Informe um valor válido!!`)
+        alert(`O terceiro tipo de veiculo não é válido!`);
     };
 
     //SAÍDA
 
-    document.write(`As novas listas são: <br> SUV: ${carrosSUV.join(", ")} <br> Sedan: ${carrosSedan.join(", ")} 
+    document.write(`<br> As novas listas são: <br> SUV: ${carrosSUV.join(", ")} <br> Sedan: ${carrosSedan.join(", ")} 
     <br> Hatch: ${carrosHatch.join(", ")} `);
 
 
-    
 </script>
