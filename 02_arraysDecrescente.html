@@ -36,9 +36,11 @@
         numero.push(number3, number1, number2);
         alert(`Ordem decrescente: ${numero.join(" - ")} `);
 
-    }else  {
+    }else if ((number3 > number1) && (number3 > number2) && (number2 > number1)) {
         numero.push(number3, number2, number1);
         alert(`Ordem decrescente: ${numero.join(" - ")}`);
+    } else {
+        alert(`Os números são iguais!`);
     };
 
 
